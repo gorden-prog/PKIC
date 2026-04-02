@@ -10,6 +10,7 @@
 
     <header>
         <nav>
+            <!-- Emmet: ul>li*4 -->
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="courses.html">Курсы</a></li>
@@ -18,17 +19,18 @@
             </ul>
         </nav>
     </header>
-    <!-- Emmet: header>nav>ul>li*4 -->
+    <!-- Emmet: header>nav -->
 
     <section class="banner">
         <div class="content">
-            <h1>Освой ИИ и Бизнес-аналитику онлайн</h1>
-            <p>Практические курсы от действующих специалистов. Старт нового потока — 1 февраля 2025.</p>
-            <a href="#feedback">Записаться на бесплатный урок</a>
+            <h1>ОНЛАЙН-ШКОЛА EDUPRO</h1>
+            <h2>УЧИСЬ. ПРАКТИКУЙ. РАБОТАЙ.</h2>
         </div>
     </section>
     <!-- Emmet: section.banner>.content -->
 
+    <!-- Секция Наши преимущества -->
+    <!-- Пункт 5: описание преимуществ в абзацах с тегом br -->
     <section class="advantages">
         <div class="content">
             <h2>Наши преимущества</h2>
@@ -55,7 +57,7 @@
 
     <section class="select">
         <div class="content">
-            <h2>Выберите курс</h2>
+            <h2>А ЧТО ВЫБИРАЕТЕ ВЫ?</h2>
             <div class="select__courses">
                 <div class="select__course">
                     <h3>Искусственный интеллект: с нуля до специалиста</h3>
@@ -77,10 +79,9 @@
     <section class="about">
         <div class="about__wrap">
             <div class="about__text">
-                <h2>О школе EduPro</h2>
-                <p>EduPro — онлайн-школа нового поколения. Мы готовим специалистов в области искусственного интеллекта и бизнес-аналитики с 2020 года.</p>
-                <p>Более 3х выпускников уже работают в ведущей компании России и мира: ЖКУ.</p>
-                <p>Наши курсы ведут действующие практики — люди, которые каждый день пьют кофе вместо пар на заправках и передают этот опыт студентам.</p>
+                <p>Меня зовут Светлана — я профессиональный преподаватель и основатель EduPro.</p>
+                <p>Мой девиз — честная и открытая работа, индивидуальный подход к каждому студенту.</p>
+                <p>В наших курсах только актуальные кофебрейки, скачанные презентации и обратная связь.</p>
             </div>
         </div>
     </section>
@@ -89,28 +90,30 @@
     <section class="reviews">
         <div class="content">
             <div class="review">
-                <div class="review__text">отзыв</div>
-                <p>- 1</p>
+                <div class="review__text">
+                    <blockquote>Внимательное отношение к студенту, понятные объяснения и реальные задачи! Огромное спасибо за удовольствие от учёбы! Светлане Юрьевне творческих успехов!</blockquote>
+                </div>
             </div>
             <div class="review">
-                <div class="review__text">отзыв</div>
-                <p>- 2</p>
+                <div class="review__text">
+                    <blockquote>Курс насыщенный, материал изложен грамотно, и каждое занятие лишь подчёркивало глубину темы! Спасибо и успехов вашей школе!</blockquote>
+                </div>
             </div>
             <div class="review">
-                <div class="review__text">отзыв</div>
-                <p>- 3</p>
+                <div class="review__text">
+                    <blockquote>Изысканный подход к обучению не оставил равнодушным ни одного участника нашей команды! Огромное спасибо за мотивацию, новые знания и превосходное качество курса!</blockquote>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Emmet: section.reviews>.content>(.review>.review__text+p)*3 -->
-     
+    <!-- Emmet: section.reviews>.content>.review>.review__text -->
 
     <section class="feedback" id="feedback">
         <div class="content">
             <div class="form__contact">
-                <h2>Запишитесь на бесплатный урок</h2>
-                <p>Телефон: +7 (800) 555-35-35</p>
-                <p>Email: coffee-break@edupro.ru</p>
+                <h2>ГОТОВ К ОБУЧЕНИЮ ИЛИ НЕ МОЖЕШЬ ОПРЕДЕЛИТЬСЯ? ЗВОНИ!</h2>
+                <a href="tel:+78005553535"><h3>+7 (800) 555-35-35</h3></a>
+                <h3>ИЛИ ОСТАВЬ НАМ СВОЙ НОМЕР, И МЫ ПЕРЕЗВОНИМ САМИ</h3>
             </div>
             <div class="form__download">
                 <input type="text" placeholder="Ваше имя">
@@ -120,6 +123,7 @@
                     <option>Выберите курс</option>
                     <option>Искусственный интеллект: с нуля до специалиста</option>
                     <option>Бизнес-аналитика: от данных к решениям</option>
+                    <option>ИИ для бизнес-аналитика</option>
                 </select>
             </div>
             <div class="form__submit">
@@ -127,8 +131,15 @@
             </div>
         </div>
     </section>
-
     <!-- Emmet: section.feedback>.content>.form__contact+.form__download+.form__submit -->
+
+    <section class="map">
+        <div class="content">
+            <h2>Мы на карте</h2>
+            <h2>г. Москва, Костомаровский пер., 10, стр. 2</h2>
+        </div>
+    </section>
+    <!-- Emmet: section.map>.content -->
 
     <footer>
         <div class="content">
@@ -136,13 +147,10 @@
                 <div class="footer__info">
                     <p>Онлайн-школа<br>«EduPro»</p>
                     <p>ИП Кузьменко С.Ю.</p>
-                    <p>Все права защищены кофе брейком</p>
+                    <p>Все права защищены кофебрейком</p>
                 </div>
                 <div class="footer__social">
                     <p>Мы в социальных сетях</p>
-                    <a href="#">VK</a>
-                    <a href="#">Max</a>
-                    <a href="#">Rutube</a>
                 </div>
                 <div class="footer__menu">
                     <nav>
@@ -157,8 +165,8 @@
                 </div>
             </div>
             <div class="footer__add">
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Договор оферты</a>
+                <p>При создании сайта использовались изображения с яндекс картинок</p>
+                <p>Источники вдохновения: хотдог с НефтьМагистраль</p>
             </div>
         </div>
     </footer>
