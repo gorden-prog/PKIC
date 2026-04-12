@@ -594,3 +594,146 @@ footer {
 .course__buy a:hover {
     background: #1040b0;
 }
+
+@media (max-width: 900px) {
+    .course {
+        flex-direction: column;
+    }
+
+    .course__descript {
+        flex-direction: column;
+    }
+
+    .course__descript img {
+        width: 100%;
+        min-width: 0;
+        min-height: 200px;
+        height: 220px;
+    }
+
+    .course__buy {
+        min-width: 0;
+        max-width: 100%;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .footer__main {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .banner {
+        padding: 36px 16px;
+    }
+
+    .banner h1 {
+        font-size: 1.4rem;
+    }
+
+    section {
+        padding: 32px 16px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .advantages__cards {
+        flex-direction: column;
+    }
+
+    .advantage {
+        flex: none;
+    }
+
+    .select__courses {
+        flex-direction: column;
+    }
+
+    .select__course {
+        flex: none;
+    }
+
+    .reviews .content {
+        flex-direction: column;
+    }
+
+    .review {
+        flex: none;
+    }
+
+    .teachers .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .map iframe {
+        height: 260px;
+    }
+
+    .pricing {
+        overflow-x: auto;
+    }
+
+    .answer {
+        padding: 60px 16px;
+    }
+
+    .answer h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer__main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer__info,
+    .footer__social,
+    .footer__menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner h1 {
+        font-size: 1.15rem;
+    }
+
+    form#feedbackForm {
+        gap: 20px;
+    }
+
+    .form__submit input[type="submit"] {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+}
