@@ -29,6 +29,14 @@ header {
     height: auto;
 }
 
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
 header nav a {
     color: #fff;
     text-decoration: none;
@@ -39,12 +47,47 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+.btn-login {
+    color: #4c84fd;
+    background: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 18px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background: #e8f0ff;
+}
+
+.answer a,
+.course__buy a,
+.form__submit input[type="submit"] {
+    background: #4c84fd;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.answer a:hover,
+.course__buy a:hover,
+.form__submit input[type="submit"]:hover {
+    background: #1040b0;
+}
+
+.advantage,
+.select__course,
+.review,
+.teacher {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
 }
 
 .banner {
@@ -80,9 +123,6 @@ section h2 {
 
 .advantage {
     flex: 1 1 200px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
     padding: 12px;
 }
 
@@ -99,24 +139,17 @@ section h2 {
 
 .select__course {
     flex: 1 1 300px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
     padding: 25px;
-    background: #fff;
 }
 
-.select__course h3 {
-    margin-bottom: 8px;
-}
+.select__course h3 { margin-bottom: 8px; }
 
 .select__course p {
     margin-bottom: 10px;
     color: #555;
 }
 
-.select__course a {
-    color: #1a56db;
-}
+.select__course a { color: #1a56db; }
 
 .select__course img {
     width: 100%;
@@ -141,19 +174,7 @@ section h2 {
 
 .review {
     flex: 1 1 280px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
     padding: 20px;
-}
-
-.review img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 12px;
 }
 
 .feedback {
@@ -169,8 +190,7 @@ form#feedbackForm {
     margin: 0 auto;
 }
 
-.form__contact,
-.form__download {
+.form__contact {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -217,54 +237,21 @@ form#feedbackForm {
     transition: border-color 0.2s;
 }
 
-.form__contact input::placeholder {
-    color: #9ca3af;
-}
+.form__contact input::placeholder { color: #9ca3af; }
 
 .form__contact input:focus,
 .form__contact select:focus {
     border-color: #4c84fd;
 }
 
-.form__contact select option {
-    background: #1f2937;
-}
+.form__contact select option { background: #1f2937; }
 
-.input--error {
-    border-color: #e53e3e !important;
-}
+.input--error { border-color: #e53e3e !important; }
 
 .form__error {
     color: #fc8181;
     font-size: 0.8rem;
     min-height: 1em;
-}
-
-.form__download p {
-    color: #9ca3af;
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.form__download label[for="download"] {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #374151;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    border: 1px dashed #6b7280;
-    text-align: center;
-    transition: background 0.2s;
-}
-
-.form__download label[for="download"]:hover {
-    background: #4b5563;
-}
-
-.form__download input[type="file"] {
-    display: none;
 }
 
 .form__submit {
@@ -297,19 +284,8 @@ form#feedbackForm {
 
 .form__submit input[type="submit"] {
     width: 100%;
-    background: #4c84fd;
-    color: #fff;
-    border: none;
     padding: 14px;
     font-size: 15px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.form__submit input[type="submit"]:hover {
-    background: #1040b0;
 }
 
 .map iframe {
@@ -337,21 +313,10 @@ form#feedbackForm {
 
 .answer a {
     display: inline-block;
-    background: #4c84fd;
-    color: #fff;
     padding: 12px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-.answer a:hover {
-    background: #1040b0;
-}
-
-.pricing {
-    padding: 50px 0;
-}
+.pricing { padding: 50px 0; }
 
 .pricing__table {
     width: 100%;
@@ -371,13 +336,8 @@ form#feedbackForm {
     color: #fff;
 }
 
-.pricing__table tbody tr:nth-child(even) {
-    background: #f5f8ff;
-}
-
-.pricing__table tbody tr:hover {
-    background: #e8efff;
-}
+.pricing__table tbody tr:nth-child(even) { background: #f5f8ff; }
+.pricing__table tbody tr:hover { background: #e8efff; }
 
 footer {
     background: #1f2937;
@@ -405,9 +365,7 @@ footer {
     margin-right: 15px;
 }
 
-.footer__social a:hover {
-    color: #fff;
-}
+.footer__social a:hover { color: #fff; }
 
 .footer__social img {
     width: 30px;
@@ -418,9 +376,7 @@ footer {
     transition: filter 0.2s;
 }
 
-.footer__social a:hover img {
-    filter: brightness(1.2);
-}
+.footer__social a:hover img { filter: brightness(1.2); }
 
 .footer__menu nav ul {
     list-style: none;
@@ -436,9 +392,7 @@ footer {
     font-size: 0.9rem;
 }
 
-.footer__menu nav a:hover {
-    color: #fff;
-}
+.footer__menu nav a:hover { color: #fff; }
 
 .footer__add {
     border-top: 1px solid #374151;
@@ -452,9 +406,9 @@ footer {
     margin-right: 20px;
 }
 
-.footer__add a:hover {
-    color: #fff;
-}
+.footer__add a:hover { color: #fff; }
+
+/* ─── Преподаватели ──────────────────────────────── */
 
 .teachers .content {
     display: flex;
@@ -466,9 +420,6 @@ footer {
 .teacher {
     flex: 1 1 250px;
     max-width: 300px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
     padding: 20px;
     text-align: center;
     margin: 0;
@@ -580,29 +531,131 @@ footer {
 
 .course__buy a {
     display: block;
-    background: #4c84fd;
-    color: #fff;
     text-align: center;
     padding: 12px;
-    border-radius: 6px;
-    text-decoration: none;
     font-size: 0.9rem;
+}
+
+.admin { padding: 40px 0; }
+
+.admin__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin__table th,
+.admin__table td {
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.admin__table th { background: #222; color: #fff; }
+.admin__table tr:nth-child(even) { background: #f9f9f9; }
+.admin__table a { color: #222; }
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #e8f4fd;
+    color: #1a6fa8;
+}
+
+.admin__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.admin__header h2 { margin: 0; }
+
+.btn-logout {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 7px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover { border-color: #c0392b; color: #c0392b; }
+
+.btn-delete {
+    background: none;
+    border: 1px solid #e0a0a0;
+    color: #c0392b;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover { background: #c0392b; color: #fff; border-color: #c0392b; }
+
+.admin__table-wrap { overflow-x: auto; }
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+.login__form {
+    background: #fff;
+    padding: 40px;
+    width: 340px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.login__form h2 { margin-bottom: 24px; text-align: center; }
+
+.login__form input[type=text],
+.login__form input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login__form input[type=submit] {
+    width: 100%;
+    background: #4c84fd;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
     font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
     transition: background 0.2s;
 }
 
-.course__buy a:hover {
-    background: #1040b0;
+.login__form input[type=submit]:hover { background: #1040b0; }
+
+.login__error {
+    color: #c0392b;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
-    .course {
-        flex-direction: column;
-    }
+    .course { flex-direction: column; }
 
-    .course__descript {
-        flex-direction: column;
-    }
+    .course__descript { flex-direction: column; }
 
     .course__descript img {
         width: 100%;
@@ -618,9 +671,7 @@ footer {
         border-top: 1px solid #e0e0e0;
     }
 
-    .footer__main {
-        gap: 24px;
-    }
+    .footer__main { gap: 24px; }
 }
 
 @media (max-width: 640px) {
@@ -636,101 +687,50 @@ footer {
         gap: 10px 16px;
     }
 
-    header nav a {
-        font-size: 14px;
-    }
+    header nav a { font-size: 14px; }
+    .logo { width: 120px; }
+    .banner { padding: 36px 16px; }
+    .banner h1 { font-size: 1.4rem; }
+    section { padding: 32px 16px; }
+    section h2 { font-size: 1.3rem; }
 
-    .logo {
-        width: 120px;
-    }
-
-    .banner {
-        padding: 36px 16px;
-    }
-
-    .banner h1 {
-        font-size: 1.4rem;
-    }
-
-    section {
-        padding: 32px 16px;
-    }
-
-    section h2 {
-        font-size: 1.3rem;
-    }
-
-    .advantages__cards {
-        flex-direction: column;
-    }
-
-    .advantage {
-        flex: none;
-    }
-
-    .select__courses {
-        flex-direction: column;
-    }
-
-    .select__course {
-        flex: none;
-    }
-
-    .reviews .content {
-        flex-direction: column;
-    }
-
-    .review {
-        flex: none;
-    }
+    .advantages__cards { flex-direction: column; }
+    .advantage { flex: none; }
+    .select__courses { flex-direction: column; }
+    .select__course { flex: none; }
+    .reviews .content { flex-direction: column; }
+    .review { flex: none; }
 
     .teachers .content {
         flex-direction: column;
         align-items: center;
     }
 
-    .teacher {
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-    }
+    .teacher { flex: none; width: 100%; max-width: 100%; }
+    .map iframe { height: 260px; }
+    .pricing { overflow-x: auto; }
+    .answer { padding: 60px 16px; }
+    .answer h2 { font-size: 1.5rem; }
 
-    .map iframe {
-        height: 260px;
-    }
-
-    .pricing {
-        overflow-x: auto;
-    }
-
-    .answer {
-        padding: 60px 16px;
-    }
-
-    .answer h2 {
-        font-size: 1.5rem;
-    }
-
-    .footer__main {
-        flex-direction: column;
-        gap: 20px;
-    }
+    .footer__main { flex-direction: column; gap: 20px; }
 
     .footer__info,
     .footer__social,
-    .footer__menu {
-        width: 100%;
-    }
+    .footer__menu { width: 100%; }
+
+    .admin { padding: 24px 0; }
+    .admin__header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .admin__table { font-size: 12px; }
+    .admin__table th,
+    .admin__table td { padding: 7px 10px; }
+
+    .login__form { width: 100%; padding: 28px 20px; }
 }
 
 @media (max-width: 400px) {
-    .banner h1 {
-        font-size: 1.15rem;
-    }
+    .banner h1 { font-size: 1.15rem; }
 
-    form#feedbackForm {
-        gap: 20px;
-    }
+    form#feedbackForm { gap: 20px; }
 
     .form__submit input[type="submit"] {
         font-size: 13px;
