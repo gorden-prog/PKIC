@@ -1,23 +1,27 @@
 <?php
 session_start();
 if (empty($_SESSION['admin'])) {
-    header('Location: /php/admin/login.php');
+    header('Location: /pages/admin/login.php');
     exit;
 }
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: /php/admin/login.php');
+    header('Location: /pages/admin/login.php');
     exit;
 }
 
+require_once __DIR__ . '/../../function/connect.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
-    require_once __DIR__ . '/../config.php';
-    $stmt = $pdo->prepare('DELETE FROM applications WHERE id = ?');
+    $stmt = $pdo->prepare('DELETE FROM feedback WHERE id = ?');
     $stmt->execute([(int) $_POST['delete_id']]);
-    header('Location: /php/admin/index.php');
+    header('Location: /pages/admin/index.php');
     exit;
 }
+
+$stmt = $pdo->query('SELECT * FROM feedback ORDER BY created_at DESC');
+$rows = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -25,28 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заявки — EduPro Admin</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 <body>
 
 <header>
-    <a href="/index.html"><img src="/assets/img/logo.png" class="logo" alt="EduPro"></a>
+    <a href="/"><img src="/assets/img/logo.png" class="logo" alt="EduPro"></a>
     <nav>
         <ul>
-            <li><a href="/index.html">Главная</a></li>
-            <li><a href="/courses.html">Курсы</a></li>
-            <li><a href="/teachers.html">Преподаватели</a></li>
-            <li><a href="/learning.html">Как проходит обучение</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/pages/courses/">Курсы</a></li>
+            <li><a href="/pages/teachers/">Преподаватели</a></li>
+            <li><a href="/pages/learning/">Как проходит обучение</a></li>
         </ul>
     </nav>
 </header>
-
-<?php
-require_once __DIR__ . '/../config.php';
-
-$stmt = $pdo->query('SELECT * FROM applications ORDER BY created_at DESC');
-$rows = $stmt->fetchAll();
-?>
 
 <section class="admin">
     <div class="content">

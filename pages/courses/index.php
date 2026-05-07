@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы — EduPro</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-
-    <header>
-        <a href="index.html"><img src="assets/img/logo.png" class="logo" alt="EduPro"></a>
-        <nav>
-            <!-- Emmet: ul>li*4 -->
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="courses.html">Курсы</a></li>
-                <li><a href="teachers.html">Преподаватели</a></li>
-                <li><a href="learning.html">Как проходит обучение</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Emmet: header>nav -->
+<?php
+  include(__DIR__ . "/../../inc/header.php");
+?>
 
     <section class="banner">
         <div class="content">
@@ -28,13 +8,12 @@
             <h2>УЧИСЬ. ПРАКТИКУЙ. РАБОТАЙ.</h2>
         </div>
     </section>
-    <!-- Emmet: section.banner>.content -->
 
     <section class="courses">
         <div class="content">
             <div class="course">
                 <div class="course__descript">
-                    <img src="assets/img/courses/ai.png" alt="Искусственный интеллект">
+                    <img src="/assets/img/courses/ai.png" alt="Искусственный интеллект">
                     <div class="course__descript__text">
                         <h2>Искусственный интеллект: с нуля до специалиста</h2>
                         <p>Смотрите, как работает чужой код, копируйте его, называйте нейросетью и кладите в портфолио. Курс подходит для тех, кто хочет писать "ML-инженер" в резюме, не зная, что это значит.</p>
@@ -58,13 +37,13 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="index.html?course=ai#feedback">ПЕРЕЙТИ К КУРСУ</a>
+                    <a href="/?course=ai#feedback">ПЕРЕЙТИ К КУРСУ</a>
                 </div>
             </div>
 
             <div class="course">
                 <div class="course__descript">
-                    <img src="assets/img/courses/business.png" alt="Бизнес-аналитика">
+                    <img src="/assets/img/courses/business.png" alt="Бизнес-аналитика">
                     <div class="course__descript__text">
                         <h2>Бизнес-аналитика: от данных к решениям</h2>
                         <p>Откройте Excel, нарисуйте красивые стрелочки в BPMN 2.0 и сделайте вид, что анализируете данные. После курса вы сможете убедить любого руководителя, что его проблемы — в неправильных графиках.</p>
@@ -90,9 +69,10 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="index.html?course=business#feedback">ПЕРЕЙТИ К КУРСУ</a>
+                    <a href="/?course=business#feedback">ПЕРЕЙТИ К КУРСУ</a>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="pricing">
@@ -128,44 +108,6 @@
         </div>
     </section>
 
-    <footer>
-        <div class="content">
-            <div class="footer__main">
-                <div class="footer__info">
-                    <p>Онлайн-школа<br>«EduPro»</p>
-                    <p>ИП Кузьменко С.Ю.</p>
-                    <p>Все права защищены кофе брейком</p>
-                </div>
-                <div class="footer__social">
-                    <p>Мы в социальных сетях</p>
-                    <a href="https://rutube.ru/video/9c2ee5c79ce9f0ae21b58ed977466c38/">
-                        <img src="assets/img/icons/icon-5.png" alt="ВКонтакте">
-                    </a>
-                    <a href="https://rutube.ru/video/9c2ee5c79ce9f0ae21b58ed977466c38/">
-                        <img src="assets/img/icons/icon-6.png" alt="Max">
-                    </a>
-                    <a href="https://rutube.ru/video/9c2ee5c79ce9f0ae21b58ed977466c38/">
-                        <img src="assets/img/icons/icon-7.png" alt="Rutube">
-                    </a>
-                </div>
-                <div class="footer__menu">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="courses.html">Курсы</a></li>
-                            <li><a href="teachers.html">Преподаватели</a></li>
-                            <li><a href="learning.html">Как проходит обучение</a></li>
-                            <li><a href="#feedback">Контакты</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="footer__add">
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Договор оферты</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+<?php
+  include(__DIR__ . "/../../inc/footer.php");
+?>

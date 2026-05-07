@@ -8,7 +8,7 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['login'] === $env['ADMIN_LOGIN'] && $_POST['password'] === $env['ADMIN_PASS']) {
         $_SESSION['admin'] = true;
-        header('Location: /php/admin/index.php');
+        header('Location: /pages/admin/index.php');
         exit;
     }
     $error = 'Неверный логин или пароль';
@@ -20,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход — EduPro Admin</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 <body>
 
 <header>
-    <a href="/index.html"><img src="/assets/img/logo.png" class="logo" alt="EduPro"></a>
+    <a href="/"><img src="/assets/img/logo.png" class="logo" alt="EduPro"></a>
 </header>
 
 <section class="login">
