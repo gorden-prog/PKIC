@@ -41,6 +41,7 @@ header nav a {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+    cursor: pointer;
 }
 
 header nav a:hover {
@@ -390,6 +391,7 @@ footer {
     text-decoration: none;
     margin-bottom: 6px;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .footer__menu nav a:hover { color: #fff; }
@@ -408,7 +410,6 @@ footer {
 
 .footer__add a:hover { color: #fff; }
 
-/* ─── Преподаватели ──────────────────────────────── */
 
 .teachers .content {
     display: flex;

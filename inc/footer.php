@@ -21,11 +21,11 @@
                 <div class="footer__menu">
                     <nav>
                         <ul>
-                            <li><a href="/">Главная</a></li>
-                            <li><a href="/pages/courses/">Курсы</a></li>
-                            <li><a href="/pages/teachers/">Преподаватели</a></li>
-                            <li><a href="/pages/learning/">Как проходит обучение</a></li>
-                            <li><a href="/#feedback">Контакты</a></li>
+                            <li><a onclick="openPage('main');">Главная</a></li>
+                            <li><a onclick="openPage('courses');">Курсы</a></li>
+                            <li><a onclick="openPage('teachers');">Преподаватели</a></li>
+                            <li><a onclick="openPage('learning');">Как проходит обучение</a></li>
+                            <li><a onclick="openPage('main', true);">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>

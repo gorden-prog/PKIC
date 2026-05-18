@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 <body>
-
     <header>
-        <a href="/"><img src="/assets/img/logo.png" class="logo" alt="EduPro"></a>
+        <a onclick="openPage('main');">
+            <img src="/assets/img/logo.png" class="logo" alt="EduPro">
+        </a>
         <nav>
             <ul>
-                <li><a href="/">Главная</a></li>
-                <li><a href="/pages/courses/">Курсы</a></li>
-                <li><a href="/pages/teachers/">Преподаватели</a></li>
-                <li><a href="/pages/learning/">Как проходит обучение</a></li>
+                <li><a onclick="openPage('courses');">Курсы</a></li>
+                <li><a onclick="openPage('teachers');">Преподаватели</a></li>
+                <li><a onclick="openPage('learning');">Как проходит обучение</a></li>
+                <li><a onclick="openPage('main', true);">Контакты</a></li>
             </ul>
         </nav>
         <a href="/pages/admin/login.php" class="btn-login">Войти</a>

@@ -9,5 +9,5 @@ $course = trim($_POST['course'] ?? '');
 $stmt = $pdo->prepare('INSERT INTO feedback (name, phone, email, course) VALUES (?, ?, ?, ?)');
 $stmt->execute([$name, $phone, $email, $course]);
 
-header('Location: /pages/answer/');
+header('Location: /');
 exit;
